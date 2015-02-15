@@ -27,8 +27,8 @@
     };
 
     map = new Map("mapCanvas", {
-      center: [270.076, -10.132],
-      zoom: 5,
+      center: [230.076, 30.132],
+      zoom: 5, //Math.floor(Math.random() *5) + 3,
       basemap: "darkgray"
     });
 
