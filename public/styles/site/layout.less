@@ -11,6 +11,10 @@ body{
 
 
 
+
+
+
+
 #header {
 	height: 50px;
 	display: block;
@@ -32,6 +36,7 @@ body{
 		padding: 0;
 		list-style: none;
 		float: right;
+		-webkit-font-smoothing: subpixel-antialiased;
 		li{
 			float:left;
 			padding: 30px 40px 0 10px;
@@ -45,8 +50,109 @@ body{
 			}
 		}
 	}
-	
 }
+
+
+
+
+
+
+
+
+
+
+.slider {
+	height: 1000px;
+	width: 100%;
+	}	
+	
+	#mapCanvas {
+		padding:0;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(-180deg, #002c5b 0%,#03313d 49%,#03313d 49%,#091733 100%);
+		position: fixed;
+		z-index: -1;
+		overflow: hidden;
+		-webkit-transition: opacity 2s ease-in;
+		}
+		
+	.tagline{
+		height: 40px;
+		width: 246px;
+		top: 500px;
+		left: 200px;
+		background-color: @windblack;
+		position: fixed;
+		z-index: 1;
+		}
+		
+			h2{
+				color: white;
+				font-family: "brandon-grotesque",sans-serif;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 43px;
+				margin: 0 0 0 15px;
+				text-transform: uppercase;
+				text-decoration: none; 
+				-webkit-font-smoothing: subpixel-antialiased;
+				}
+				
+  
+			
+			
+.hellotext{
+	height: 150px;
+	width: 350px;
+	top: 560px;
+	left: 200px;
+	position: fixed;
+	z-index: 1;
+	}
+	
+	.bg{
+		heigh: 150px;
+		width: 350px;
+	}
+		span.bg{
+			color:black;
+			font-family: "Open-Sans",sans-serif;
+			font-size: 14px;
+			font-weight: 200;
+			line-height: 20px;
+			position: relative;
+			
+			background-color: @windblack;
+			box-shadow: 1px 1px 0px 15px @windblack;
+			-webkit-font-smoothing: subpixel-antialiased;
+			}
+		
+	span.text{
+		color: white;
+		font-family: "Open-Sans",sans-serif;
+		font-size: 14px;
+		font-weight: 100;
+		margin: 0 0 0 15px;
+		position: absolute;
+		top:0;
+		left: 0;
+		text-decoration: none; 
+		line-height: 20px;
+		-webkit-font-smoothing: subpixel-antialiased;
+		}
+			
+			
+			
+			
+
+				 
+
+
+
+
+
+
 
 	
 .portfolio-item{
@@ -65,45 +171,17 @@ body{
 	}
 	
 }
-
-.slider {
-	height: 800px;
-	width: 100%;	
-	
-	#mapCanvas {
-		padding:0;
-		height: 600px;
-		width: 100%;
-		background: linear-gradient(-180deg, #002c5b 0%,#03313d 49%,#03313d 49%,#091733 100%);
-		position: fixed;
-		z-index: -1;
-		overflow: hidden;
-		-webkit-transition: opacity 2s ease-in;
-			}
-		}
-	.tagline{
-		height: 40px;
-		width: 246px;
-		top: 300px;
-		left: 200px;
-		background-color: @windblack;
-		position: fixed;
-		z-index: 1;
-		
-			h2{
-				color: white;
-				font-family: "brandon-grotesque",sans-serif;
-				font-size: 18px;
-				font-weight: 300;
-				line-height: 43px;
-				margin: 0 0 0 15px;
-				text-transform: uppercase;
-				text-decoration: none; 
-				}
-			}
-	.Whoweare {
-		
+			
+.homecontent{
+	width: 90%;
+	height: 2000px;
+	color: white;
+	z-index: 1;
+	position: fixed;
+	top: 800px;
 	}
+	
+
 
 		
 
