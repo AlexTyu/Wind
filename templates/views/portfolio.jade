@@ -1,0 +1,9 @@
+extends ../layouts/default
+	
+block content
+	.portfolio-items
+		each portfolio in portfolios
+			a.portfolio-item(href="/portfolio/"+portfolio.key)
+				h2= portfolio.name
+				img(src="../../files/"+portfolio.image.filename)
+			

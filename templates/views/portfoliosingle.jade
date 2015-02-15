@@ -1,0 +1,7 @@
+extends ../layouts/default
+
+block content
+	.single-portfolio
+		h1= data.portfolio.name
+		img(src="../../files/"+data.portfolio.image.filename)
+	
