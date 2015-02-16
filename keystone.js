@@ -58,6 +58,8 @@ keystone.set('nav', {
 	'enquiries': 'enquiries',
 	'portfolio': 'portfolio',
 	'users': 'users'
+
+	
 });
 
 // Start Keystone to connect to your database and initialise the web server

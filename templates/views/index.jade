@@ -1,17 +1,33 @@
 extends ../layouts/default
 	
 block content
+	script(src='/script/dojo.js')
+	script(src='/script/windy.js')
+	script(src='http://js.arcgis.com/3.8compact')
+	script(src='/script/wind.js')
+	
 	body
 		#error
 			Unfortunately, your browser does not support all of the required features. You can still view a 
 			a(href='http://youtu.be/a0hJAZfIRvE') video.
-             
-		canvas#render(width='1', height='1', style='background: black;')
+	
+	canvas#render(width='1', height='1')
+		
+		
+	.tagline
+		h2 Design the Experience	
+		
+	.hellotext
+ 
+		span.bg The Wind is a San Francisco based Design team. We are 
+		span.bg empowered by design-thinking & thirst for perfection.
+		span.bg Practical design is our primary cause and ultimate
+		span.bg motivation.
+		span.text The Wind is a San Francisco based Design team. We are empowered by design-thinking & thirst for perfection. Practical design is our primary cause and ultimate motivation. 
+
          
-		script(src='/script/tree/shared.js')
-           
-		script(src='/script/tree/ui.js')
-            
+		script(src='/script/tree/shared.js')          
+		script(src='/script/tree/ui.js')           
 		script(src='/script/tree/flow.js')
 		script(src='/script/tree/main.js')
 		
