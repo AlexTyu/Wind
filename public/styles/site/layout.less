@@ -3,6 +3,11 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+    }
 	
 body{
 	margin: 0;
@@ -13,13 +18,75 @@ body{
 }
 
 
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+@keyframes movebox {
+	from { top: 40%; left: 180px; }
+	to   { top: 40%; left: 100px; }
+	}
+@-moz-keyframes movebox { /* Firefox */
+	from { top: 40%; left: 180px; }
+	to   { top: 40%; left: 100px; }
+	}
+@-webkit-keyframes movebox { /* Safari and Chrome */
+	from { top: 40%; left: 180px; }
+	to   { top: 40%; left: 100px; }
+	}
+@-o-keyframes movebox { /* Opera */
+	from { top: 40%; left: 180px; }
+	to   { top: 40%; left: 100px; }
+	}
+
+
+
 
 #header {
-	height: 50px;
+	height: 78px;
 	display: block;
 	width: 100%;
 	position: fixed;
+	background-color: rgba(0, 0, 0, 0.05);
 	top: 0;
+	animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 	}
 
 
@@ -29,7 +96,6 @@ body{
 		width: 150px;
 		background-image: url('/images/wind.svg');
 		background-repeat: no-repeat;
-		position: fixed;
 		margin: 26px 0 0 43px;
 		}
 		
@@ -39,6 +105,7 @@ body{
 		background-image: url('/images/w.svg');
 		background-repeat: no-repeat;
 		position: fixed;
+		background-size: 40px;
 		margin: 26px 0 0 43px;
 		}
 	
@@ -67,35 +134,38 @@ body{
  	position: absolute;
     left: 0;
     bottom: 0;
-    height: 60px;
+    height: 78px;
     width: 100%;
+    background-color: black;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 	}
 	
+	
 	a.email{
-		color: #000;
+		color: #fff;
 		font-family: "Open-Sans",sans-serif;
-		font-size: 15px;
+		font-size: 13px;
 		font-weight: 100;
 		float: right;
 		margin:0 48px 0 0;
 		text-decoration: none; 
 		}
 	
-	
-	
+	p.capitalize{
+		color: rgba(255, 255, 255, 0.26);
+		font-family: "Brandon-grotesque",sans-serif;
+		font-size: 13px;
+		font-weight: 600;
+		float: left;
+		margin:0 0 0 48px;
+		text-transform: uppercase;
+		text-decoration: none; 
+		-webkit-font-smoothing: subpixel-antialiased;
+		}
 
 
-.blackshit{
-	height: 100%;
-	width: 100%;
-	background-color: black;
-	position: absolute;
-	display: hidden;
-	top:0;
-	left:0;
-	z-index: 2;
-	opacity: 0.7;
-	-webkit-animation: fadein 2s;
 
 .slider {
 	height: 100%;
@@ -103,7 +173,7 @@ body{
 	}	
 	
 
-	}
+	
 	#mapCanvas {
 		padding:0;
 		height: 100%;
@@ -112,24 +182,37 @@ body{
 		position: fixed;
 		z-index: -1;
 		overflow: hidden;
+		-moz-animation: fadein 2s; /* Firefox */
+		-webkit-animation: fadein 2s; /* Safari and Chrome */
+		-o-animation: fadein 2s; /* Opera */
 		
 		}
 		
+.hellob{
+	height: 40px;
+	width: 400px;
+	top: 40%;
+	position: absolute;
+	left: 100px;
+
+	
+}		
 	.tagline{
-		height: 40px;
-		width: 246px;
-		top: 40%;
-		left: 200px;
 		background-color: @windblack;
 		position: fixed;
-		z-index: 1;
+		width: 250px;
+		height: 40px;
+		z-index: 1;	
+		-moz-animation: movebox 1s, fadein 2s;  /* Firefox */
+		-webkit-animation: movebox 1s, fadein 2s;  /* Safari and Chrome */
+		-o-animation: movebox 1s, fadein 2s;  /* Opera */
 		}
 		
 			h2{
 				color: white;
 				font-family: "brandon-grotesque",sans-serif;
 				font-size: 18px;
-				font-weight: 300;
+				font-weight: 600;
 				line-height: 43px;
 				margin: 0 0 0 15px;
 				text-transform: uppercase;
@@ -139,37 +222,43 @@ body{
 				
   
 			
-			
-.hellotext{
-	height: 150px;
-	width: 350px;
-	top: 50%;
-	left: 200px;
-	position: fixed;
-	z-index: 1;
-	}
-	
-	.bg{
-		heigh: 150px;
-		width: 350px;
-	}
-
 		
-	span.text{
+	.hellotext{
 		color: black;
-		font-family: "Open-Sans",sans-serif;
-		font-size: 14px;
-		font-weight: 100;
-		margin: 0 0 0 15px;
+		font-family: "Lato",sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+		margin: 103px 0 0 15px;
 		position: absolute;
 		top:0;
 		left: 0;
 		text-decoration: none; 
-		line-height: 20px;
+		line-height: 26px;
 		-webkit-font-smoothing: subpixel-antialiased;
 		}
-		
-		
+	
+		.wedo{
+			height: 40px;
+			width: 00px;
+			top: 80%;
+			position: absolute;
+			right: 80px;
+			border: black;
+			float: right;
+			border-bottom-width: 1px;
+			}
+				.p{
+					color: black;
+					font-family: "brandon-grotesque",sans-serif;
+					font-size: 18px;
+					font-weight: 600;
+					line-height: 43px;
+					margin: 0 0 0 15px;
+					text-transform: uppercase;
+					text-decoration: none; 
+					-webkit-font-smoothing: subpixel-antialiased;
+					
+				}
 			
 			
 body {
@@ -201,6 +290,9 @@ body {
     height: 100%;
     width: 100%;
     z-index: -2;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 }
 
 				 
@@ -209,25 +301,54 @@ body {
 
 
 
-
+#categories{
+	height: 300px;
+	display: block;
+	width: 100%;
+	position: relative;
+	top: 0;
+	background-color: #2f2f2f;
+	z-index: -1;
+	}
+	
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		float: right;
+		-webkit-font-smoothing: subpixel-antialiased;
+		}
+		
+		li{
+			float:left;
+			padding: 30px 40px 0 10px;
+			color: #fff;
+			font-family: "brandon-grotesque",sans-serif;
+			font-size: 13px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-decoration: none; 
+			}
+			
+			
+			
+		
+		
 
 	
-.portfolio-item{
+	
+
+.project{
 	float:left;
 	width: 500px;
-	display:block;
-	padding:10px;
+	padding:0px;
+	}
+	
 	img{
 		width: 100%;
 	}
-}
 
-.single-portfolio{
-	h1{
-		font-size: 400px;
-	}
 	
-}
 			
 .homecontent{
 	width: 90%;

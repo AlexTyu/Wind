@@ -1,9 +1,13 @@
 extends ../layouts/default
 	
 block content
-	.portfolio-items
+	#categories
+		ul
+			li  Internet
+	
+	#project
 		each portfolio in portfolios
-			a.portfolio-item(href="/portfolio/"+portfolio.key)
+			a.project(href="/portfolio/"+portfolio.key)
 				h2= portfolio.name
 				img(src="../../files/"+portfolio.image.filename)
 			
