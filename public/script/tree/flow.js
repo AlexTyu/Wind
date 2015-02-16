@@ -438,14 +438,12 @@ var BACKGROUND_FRAGMENT_SHADER_SOURCE = [
     '}'
 ].join('\n');
 
+
 var Camera = function (element) {
     var azimuth = INITIAL_AZIMUTH,
         elevation = INITIAL_ELEVATION;
 
-    var lastMouseX = 0,
-        lastMouseY = 0;
-
-    var mouseDown = false;
+  
 
     var viewMatrix = new Float32Array(16);
 
@@ -492,17 +490,17 @@ var Camera = function (element) {
         premultiplyMatrix(viewMatrix, viewMatrix, distanceTranslationMatrix);
     };
 
-    element.addEventListener('mousedown', function (event) {
+    element.addEventListener('mousedownoff', function (event) {
         mouseDown = true;
         lastMouseX = getMousePosition(event, element).x;
         lastMouseY = getMousePosition(event, element).y;
     });
 
-    document.addEventListener('mouseup', function (event) {
+    document.addEventListener('mouseupoff', function (event) {
         mouseDown = false;
     });
 
-    element.addEventListener('mousemove', function (event) {
+    element.addEventListener('mousemoveoff', function (event) {
         if (mouseDown) {
             var mouseX = getMousePosition(event, element).x;
             var mouseY = getMousePosition(event, element).y;
@@ -653,7 +651,7 @@ var Flow = function (canvas) {
     var lightViewProjectionMatrix = new Float32Array(16);
     premultiplyMatrix(lightViewProjectionMatrix, lightViewMatrix, lightProjectionMatrix);
 
-    var hue = 900;
+    var hue = 0;
     var timeScale = INITIAL_SPEED;
     var persistence = INITIAL_TURBULENCE;
 
