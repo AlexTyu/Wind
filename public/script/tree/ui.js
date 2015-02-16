@@ -66,31 +66,7 @@ var HuePicker = function (canvas, changeCallback) {
         return hue;
     };
 
-    var mousePressed = false;
 
-    canvas.addEventListener('mousedown', function (event) {
-        var mouseX = getMousePosition(event, canvas).x;
-        var mouseY = getMousePosition(event, canvas).y;
-
-        var xDistance = canvas.width / 2 - mouseX;
-        var yDistance = canvas.height / 2 - mouseY;
-        var distance = Math.sqrt(xDistance * xDistance + yDistance * yDistance);
-
-        if (distance < HUE_OUTER_RADIUS) {
-            mousePressed = true;
-            onChange(event);
-        }
-    });
-
-    document.addEventListener('mouseup', function (event) {
-        mousePressed = false;
-    });
-
-    document.addEventListener('mousemove', function (event) {
-        if (mousePressed) {
-            onChange(event);
-        }
-    });
 
     var onChange = function (event) {
         var mouseX = getMousePosition(event, canvas).x;

@@ -653,7 +653,7 @@ var Flow = function (canvas) {
     var lightViewProjectionMatrix = new Float32Array(16);
     premultiplyMatrix(lightViewProjectionMatrix, lightViewMatrix, lightProjectionMatrix);
 
-    var hue = 0;
+    var hue = 900;
     var timeScale = INITIAL_SPEED;
     var persistence = INITIAL_TURBULENCE;
 

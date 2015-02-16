@@ -1,4 +1,4 @@
-@windblack: rgba(71, 0, 30, 0.76); //Plashka 
+@windblack: rgba(0, 0, 0, 0.93); //Plashka 
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -32,6 +32,15 @@ body{
 		position: fixed;
 		margin: 26px 0 0 43px;
 		}
+		
+	#symbol {
+		height: 40px;
+		width: 150px;
+		background-image: url('/images/w.svg');
+		background-repeat: no-repeat;
+		position: fixed;
+		margin: 26px 0 0 43px;
+		}
 	
 	ul{
 		margin: 0;
@@ -43,7 +52,7 @@ body{
 			float:left;
 			padding: 30px 40px 0 10px;
 			a{
-				color: #fff;
+				color: #000;
 				font-family: "brandon-grotesque",sans-serif;
 				font-size: 13px;
 				font-weight: 700;
@@ -63,7 +72,7 @@ body{
 	}
 	
 	a.email{
-		color: #fff;
+		color: #000;
 		font-family: "Open-Sans",sans-serif;
 		font-size: 15px;
 		font-weight: 100;
@@ -109,7 +118,7 @@ body{
 	.tagline{
 		height: 40px;
 		width: 246px;
-		top: 500px;
+		top: 40%;
 		left: 200px;
 		background-color: @windblack;
 		position: fixed;
@@ -134,7 +143,7 @@ body{
 .hellotext{
 	height: 150px;
 	width: 350px;
-	top: 560px;
+	top: 50%;
 	left: 200px;
 	position: fixed;
 	z-index: 1;
@@ -144,21 +153,10 @@ body{
 		heigh: 150px;
 		width: 350px;
 	}
-		span.bg{
-			color:black;
-			font-family: "Open-Sans",sans-serif;
-			font-size: 14px;
-			font-weight: 200;
-			line-height: 20px;
-			position: relative;
-			
-			background-color: @windblack;
-			box-shadow: 1px 1px 0px 15px @windblack;
-			-webkit-font-smoothing: subpixel-antialiased;
-			}
+
 		
 	span.text{
-		color: white;
+		color: black;
 		font-family: "Open-Sans",sans-serif;
 		font-size: 14px;
 		font-weight: 100;
