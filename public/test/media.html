@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- 
+      ___ (¯¯¯(   )¯¯|)¯¯)'         ___      ________                     ___      ________   ')¯¯¯)  ___  |¯¯|\¯¯¯\     __       *
+ )¯¯(\__(   )___)(__(\ ¯¯¯(*  (¯¯(\__(*   |__/)   (\__|'(¯¯(\__(*   |__/)   (\__|' (___(_(___( |__|/___/   (__(_/¯¯/ 
+(___(¯       *            ¯¯¯¯ )¯¯¯\)¯¯¯¯)     (___')°   )¯¯¯\)¯¯¯¯)     (___')*                                 *)¯¯¯¯\/__/' 
+                                   ¯¯¯ ¯¯¯¯                                 ¯¯¯ ¯¯¯¯                                      '            ¯¯¯¯        
+by Emilie Gervais 
+is what happens after 800ROX by Nick Briz
+shoutOutz to Tim Berners-Lee & the people from NCSA Mosaic
+-->	
+	<head>
+		<meta charset="utf-8">
+		<title>firstStudy</title>
+		<style>
+			body{
+				margin:0;
+				overflow:hidden;
+			}
+		</style>
+		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/three.min.js"></script>
+		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/Detector.js"></script>
+		<script type="text/javascript">
+			var blessing=['#ff00ff','#000','#00ffff','#ffff00','#00ff00']
+			var space=0
+			function deepNess(){
+				document.body.style.backgroundColor=blessing[space]; 
+				if(space==blessing.length){ 
+					space=0;
+					}else{
+					space++;
+				}
+				setTimeout(function(){
+					deepNess();
+				},1);
+			}			
+		</script>	
+	</head>
+	<body onload="deepNess()">
+		<script type="text/javascript">
+			if (! Detector.webgl) Detector.addGetWebGLMessage();
+			var camera, scene, renderer;
+			var geometry, material, asteroids;
+			var cnt = 0;
+			var asteroidses = [];
+			
+			function setup(){
+				var W = window.innerWidth, H = window.innerHeight;
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize(W,H);
+				document.body.appendChild(renderer.domElement);
+				camera = new THREE.PerspectiveCamera(50,W/H,1,10000);
+				camera.position.z = 200;
+				scene = new THREE.Scene();
+	
+				var points = [
+				    new THREE.Vector3( 29.04, 96.18, -73.34 ),
+				    new THREE.Vector3( 46.04, -20.4, 96.52 ),
+				    new THREE.Vector3( -55.4, 36.27, 20.97 ),
+				    new THREE.Vector3( -13.79, 43.32, 49.2 ),
+				    new THREE.Vector3( -85.28, 58.09, 38.92 ),
+				    new THREE.Vector3( 70.38, -31.42, -40.22 ),
+				    new THREE.Vector3( 3.39, -12.32, 42.51 ),
+				    new THREE.Vector3( 30.12, -57.15, -37.87 ),
+				    new THREE.Vector3( 93.27, 10.83, -62.41 ),
+				];
+				geometry = new THREE.ConvexGeometry( points );
+				material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading, side: THREE.DoubleSide, wireframe: true, wireframeLinewidth: 1, transparent: true, opacity: 1});
+				for ( var i = 0; i < geometry.vertices.length; i++ ){
+					var vertices = [];
+					for (var v = 0; v < geometry.vertices.length; v++ ){
+						vertices.push( geometry.vertices[ v ].clone());
+						if (v === i){
+							vertices[ vertices.length - 1 ].x *= 2;
+							vertices[ vertices.length - 1 ].y *= 2;
+							vertices[ vertices.length - 1 ].z *= 2;
+						}
+					}
+					geometry.morphTargets.push( { name: "target" + i, vertices: vertices } );
+				}
+ 
+				mesh = new THREE.Mesh(geometry, material);
+				mesh.material.morphTargets = true;
+				scene.add(mesh);
+				
+				geometry = new THREE.PlaneGeometry(200,200,100,100);
+				material = new THREE.MeshNormalMaterial({shading:THREE.FlatShading,side:THREE.DoubleSide, wireframe:true, wireframeLinewidth:1, transparent:true, opacity:1});
+				plane = new THREE.Mesh(geometry, material);
+				scene.add(plane);
+		
+				for ( var i = 0; i < 800; i ++ ){
+				geometry = new THREE.TetrahedronGeometry(7.02, 1);
+				material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
+				asteroids = new THREE.Mesh(geometry, material);
+				asteroids.scale.x = asteroids.scale.y = asteroids.scale.z = 0.7;
+				asteroids.position.x = Math.random() * 1500 - 750;
+				asteroids.position.y = Math.random() * 1500 - 750;
+				asteroids.position.z = Math.random() * 1500 - 750;
+				asteroids.rotation.x = Math.random() * 2 * Math.PI;
+				asteroids.rotation.y = Math.random() * 2 * Math.PI;
+				asteroids.rotation.z = Math.random() * 2 * Math.PI;
+				scene.add(asteroids);
+				asteroidses[ cnt ] = asteroids;
+				cnt += 1;
+				}
+				renderer.shadowMapEnabled = true;
+			}
+			
+			//"#
+			function draw(){
+				requestAnimationFrame(draw);
+				var seconds = new Date().getSeconds();
+				var minutes = new Date().getMinutes();
+				
+				for (i = 0; i<cnt; i++){
+					asteroids = asteroidses[i];
+					asteroids.rotation.x = Date.now() * -0.00009;
+					asteroids.rotation.y = Date.now() * -0.00009;
+					asteroids.rotation.z = Date.now() * -0.00009;
+				}
+				
+				camera.position.x = Math.sin(Date.now() * 0.000009)*1080;
+				camera.position.y = Math.sin(Date.now() * 0.000009)*1080;
+				camera.position.z = Math.sin(Date.now() * 0.000009)*1080;
+				camera.lookAt(mesh.position);
+
+				mesh.position.x = 0;
+				mesh.position.y = 0;
+				mesh.rotation.x = seconds;	
+				mesh.rotation.y = seconds;
+				mesh.rotation.z = seconds;
+				mesh.morphTargetInfluences[0] = Math.sin( Date.now() * 0.0009);
+				mesh.morphTargetInfluences[1] = Math.sin( Date.now() * 0.0008);
+				mesh.morphTargetInfluences[2] = Math.sin( Date.now() * 0.0007);
+				mesh.morphTargetInfluences[3] = Math.sin( Date.now() * 0.0006);
+				mesh.morphTargetInfluences[4] = Math.sin( Date.now() * 0.0005);
+				mesh.morphTargetInfluences[5] = Math.sin( Date.now() * 0.0004);
+				mesh.morphTargetInfluences[6] = Math.sin( Date.now() * 0.0003);
+				mesh.morphTargetInfluences[7] = Math.sin( Date.now() * 0.0002);
+				mesh.morphTargetInfluences[8] = Math.sin( Date.now() * 0.0001);
+				mesh.morphTargetInfluences[9] = Math.sin( Date.now() * 0.00001);
+				
+				plane.position.x = 0;
+				plane.position.y = -10;
+				plane.rotation.x = minutes;
+				plane.rotation.y = minutes;
+				plane.rotation.z = minutes;
+				
+				renderer.render(scene,camera);
+			}
+
+			setup();
+			draw();
+		</script>
+		
+	</body>
+</html>
