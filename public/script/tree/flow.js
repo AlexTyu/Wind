@@ -492,17 +492,17 @@ var Camera = function (element) {
         premultiplyMatrix(viewMatrix, viewMatrix, distanceTranslationMatrix);
     };
 
-    element.addEventListener('mousedown', function (event) {
+    element.addEventListener('mousedownoff', function (event) {
         mouseDown = true;
         lastMouseX = getMousePosition(event, element).x;
         lastMouseY = getMousePosition(event, element).y;
     });
 
-    document.addEventListener('mouseup', function (event) {
+    document.addEventListener('mouseupoff', function (event) {
         mouseDown = false;
     });
 
-    element.addEventListener('mousemove', function (event) {
+    element.addEventListener('mousemoveoff', function (event) {
         if (mouseDown) {
             var mouseX = getMousePosition(event, element).x;
             var mouseY = getMousePosition(event, element).y;
