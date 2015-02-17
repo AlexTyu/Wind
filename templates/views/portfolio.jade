@@ -4,10 +4,12 @@ block content
 	#categories
 		ul
 			li  Internet
-	
-	#project
-		each portfolio in portfolios
-			a.project(href="/portfolio/"+portfolio.key)
-				h2= portfolio.name
-				img(src="../../files/"+portfolio.image.filename)
 			
+	.projects
+	
+		#project
+			each portfolio in portfolios
+				a.project(href="/portfolio/"+portfolio.key)
+					//h2= portfolio.name
+					img(src="../../files/"+portfolio.image.filename)
+				

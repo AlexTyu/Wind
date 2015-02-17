@@ -7,14 +7,14 @@
 @-moz-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-    }
+}
 	
 body{
-	margin: 0;
-	padding: 0;
 	width: 100%;
 	height: 100%;
-	color: black;
+	margin: 0;
+	overflow: hidden;
+    background: rgba(230, 230, 230, 0.5);
 }
 
 
@@ -83,7 +83,7 @@ body{
 	display: block;
 	width: 100%;
 	position: fixed;
-	background-color: rgba(0, 0, 0, 0.05);
+	background-color: rgba(0, 0, 0, 0.00);
 	top: 0;
 	animation: fadein 2s;
     -moz-animation: fadein 2s; /* Firefox */
@@ -168,112 +168,112 @@ body{
 
 
 
-.slider {
-	height: 100%;
-	width: 100%;
-	}	
-	
 
-	
-	#mapCanvas {
-		padding:0;
-		height: 100%;
-		width: 100%;
-		background: linear-gradient(-180deg, #002c5b 0%,#03313d 49%,#03313d 49%,#091733 100%);
-		position: fixed;
-		z-index: -1;
-		overflow: hidden;
-		-moz-animation: fadein 2s; /* Firefox */
-		-webkit-animation: fadein 2s; /* Safari and Chrome */
-		-o-animation: fadein 2s; /* Opera */
-		
-		}
-		
-.hellob{
-	height: 40px;
-	width: 400px;
-	top: 40%;
+
+
+
+
+
+
+
+.home {
 	position: absolute;
-	left: 100px;
-
-	
-}		
-	.tagline{
-		background-color: @windblack;
-		position: fixed;
-		width: 250px;
-		height: 40px;
-		z-index: 1;	
-		-moz-animation: movebox 1s, fadein 2s;  /* Firefox */
-		-webkit-animation: movebox 1s, fadein 2s;  /* Safari and Chrome */
-		-o-animation: movebox 1s, fadein 2s;  /* Opera */
-		}
+	width: 100%;
+	height: 100%;
+	padding: 300px 20px 0px 20px;		
+	box-sizing: border-box;
+	-webkit-transition: 0.5s ease-in;
+	.content{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 20px 0 0 120px;
+		z-index: 3;
 		
-			h2{
-				color: white;
-				font-family: "brandon-grotesque",sans-serif;
-				font-size: 18px;
-				font-weight: 600;
-				line-height: 43px;
-				margin: 0 0 0 15px;
-				text-transform: uppercase;
-				text-decoration: none; 
-				-webkit-font-smoothing: subpixel-antialiased;
-				}
-				
-  
-			
-		
-	.hellotext{
-		color: black;
-		font-family: "Lato",sans-serif;
-		font-size: 18px;
-		font-weight: 300;
-		margin: 72px 0 0 0px;
-		position: absolute;
-		top:0;
-		left: 0;
-		text-decoration: none; 
-		line-height: 26px;
-		-webkit-font-smoothing: subpixel-antialiased;
-		}
-	
-		.wedo{
-			height: 40px;
-			width: 200px;
-			top: 70%;
-			position: absolute;
-			right: 80px;
-			border: black;
-			border-color: black;
-			border: 1px black;
-			float:right;
-	
-			}
-		
-		.h3{
-			color: black;
-			font-family: "brandon-grotesque", sans-serif;
-			font-size: 18px;
-			line-height: 40px;
-			float: right;
-			margin: 0 0 0 0;
-			font-weight: 600;
-			text-transform: uppercase;
-			text-decoration: none; 
-			-webkit-font-smoothing: subpixel-antialiased;
-		}
-
-			
-			
-										
-			
-			
-			
-body {
-    overflow: hidden;
-    background: rgba(230, 230, 230, 0.5);
+	}
 }
+
+
+
+
+	
+.helloblock{
+	height: 200px;
+	width: 450px;
+	left: 300px;
+	-moz-animation: movebox 1s, fadein 2s;  /* Firefox */
+	-webkit-animation: movebox 1s, fadein 2s;  /* Safari and Chrome */
+	-o-animation: movebox 1s, fadein 2s;  /* Opera */
+	}
+
+
+	
+h2.tagline{
+	background-color: @windblack;
+	width: 250px;
+	height: 40px;
+	z-index: 1;	
+	color: white;
+	text-align: center;
+	font-family: "brandon-grotesque",sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 43px;
+	margin: 0 0 0 15px;
+	text-transform: uppercase;
+	text-decoration: none; 
+	-webkit-font-smoothing: subpixel-antialiased;
+	}
+	
+			
+.hellotext{
+	color: black;
+	font-family: "Lato",sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	margin: 7px 0 0 18px;
+	top:0;
+	text-decoration: none; 
+	line-height: 26px;
+	-webkit-font-smoothing: subpixel-antialiased;
+	}			
+		
+	
+a.button{
+	height: 40px;
+	width: 200px;
+	top: 70%;
+	position: absolute;
+	right: 80px;
+	border: black;
+	border-color: black;
+	border: 1px black;
+	float:right;
+	color: black;
+	font-family: "brandon-grotesque", sans-serif;
+	font-size: 18px;
+	line-height: 40px;
+	float: right;
+	margin: 0 0 0 0;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none; 
+	-webkit-font-smoothing: subpixel-antialiased;
+	}
+
+
+
+			
+			
+			
+			
+			
+
+
+
+
+
+
 
 #error {
     display: none;
@@ -311,18 +311,13 @@ body {
 
 
 #categories{
-	height: 300px;
+	height: 200px;
 	display: block;
 	width: 100%;
-	position: relative;
-	top: 0;
+	position: absolute;
 	background-color: #2f2f2f;
 	z-index: -1;
-	}
-	
 	ul{
-		margin: 0;
-		padding: 0;
 		list-style: none;
 		float: right;
 		-webkit-font-smoothing: subpixel-antialiased;
@@ -338,12 +333,14 @@ body {
 			text-transform: uppercase;
 			text-decoration: none; 
 			}
+		}
 			
-			
-			
-		
-		
 
+.projects{
+	width: 100%;
+	height: 100%;
+	padding: 200px 0 0 0;
+}
 	
 	
 
@@ -359,19 +356,67 @@ body {
 
 	
 			
-.homecontent{
-	width: 90%;
-	height: 2000px;
-	color: white;
-	z-index: 1;
-	position: fixed;
-	top: 800px;
-	}
-	
-
 
 		
 
+		
+		
+.ebla{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 300px 20px 0px 20px;		
+	box-sizing: border-box;
+	-webkit-transition: 0.5s ease-in;
+	.content{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 20px 0 0 120px;
+		z-index: 3;
+		}
+}
+
+.hiebla{
+	height: 200px;
+	width: 450px;
+	left: 300px;
+	-moz-animation: movebox 1s, fadein 2s;  /* Firefox */
+	-webkit-animation: movebox 1s, fadein 2s;  /* Safari and Chrome */
+	-o-animation: movebox 1s, fadein 2s;  /* Opera */
+	}
+
+
+	
+h2.namesfaces{
+	background-color: @windblack;
+	width: 400px;
+	height: 60px;
+	z-index: 1;	
+	color: white;
+	text-align: center;
+	font-family: "brandon-grotesque",sans-serif;
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 43px;
+	margin: 0 0 0 15px;
+	text-transform: uppercase;
+	text-decoration: none; 
+	-webkit-font-smoothing: subpixel-antialiased;
+	}
+	
+			
+.team{
+	color: black;
+	font-family: "Lato",sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	margin: 7px 0 0 18px;
+	top:0;
+	text-decoration: none; 
+	line-height: 26px;
+	-webkit-font-smoothing: subpixel-antialiased;
+}	
 
 
 

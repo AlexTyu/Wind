@@ -7,23 +7,23 @@ block content
 	script(src='/script/wind.js')
 	
 	body
-		#error
-			Unfortunately, your browser does not support all of the required features. You can still view a 
-			a(href='http://youtu.be/a0hJAZfIRvE') video.
-	
+		#error Unfortunately, your browser does not support all of the required features. Go away	
 		canvas#render(width='1', height='1')
-		
-		.hellob
-			.tagline
-					h2 Hello. We are the Wind			
-			.hellotext The Wind is a San Francisco based Design team. We think brands, we feel the internet. are empowered by design-thinking & thirst for perfection. Practical design is our primary cause and ultimate motivation. 
-		
-		.wedo 
-			.h3 We Do >		
 		script(src='/script/tree/shared.js')          
 		script(src='/script/tree/ui.js')           
 		script(src='/script/tree/flow.js')
 		script(src='/script/tree/main.js')
+		
+		.home.content
+		
+			.helloblock
+				h2.tagline Hello. We are the Wind			
+				.hellotext The Wind is a San Francisco based Design team. <br> We feel the internet, think brands and empowered by design-thinking & thirst for perfection. <br>Practical design is our primary cause and ultimate motivation. 
+			
+			a.button(onclick="$('.projects').addClass('vis');$('.home').addClass('invis')") We Do >		
+		//.projects
+		//	.content
+
 		
 	
 	
