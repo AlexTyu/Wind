@@ -4,15 +4,19 @@
     to   { opacity: 1; }
 }
 
+
+
+
 @-moz-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
 	
-body{
-	width: 100%;
-	margin: 0;
-    background: rgba(230, 230, 230, 0.5);
+#body{
+    .home{
+		padding-top: 700px;
+		}
+
 }
 
 
@@ -103,7 +107,7 @@ h2{
 	display: block;
 	width: 100%;
 	position: fixed;
-	background-color: rgba(0, 0, 0, 0.00);
+	background-color: rgba(0,  0,  0, 0);
 	top: 0;
 	z-index: 10;
 	}
@@ -151,8 +155,7 @@ h2{
 			}
 		}
 		
-	
-	
+		
 	
 	
 	
@@ -162,11 +165,10 @@ h2{
 	
 	
 	
-/*
+
 #footer {
- 	position: fixed;
+ 	position: absolute;
     left: 0;
-    bottom: 0;
     height: 78px;
     width: 100%;
     background-color: black;
@@ -196,7 +198,7 @@ h2{
 		-webkit-font-smoothing: subpixel-antialiased;
 		}
 
-*/
+
 
 
 
@@ -205,15 +207,11 @@ h2{
 //HOMEPAGE
 
 
-#body{
-	padding-top: 700px;
-}
-
 
 .vertical{
 	height: 100%;
 	width: 85px;
-	background-color: rgba(0, 0, 0, 0.05);
+	background-color: #041C2D;
 	position: fixed;
 	left: 0;
 	top:0;
@@ -223,8 +221,8 @@ h2{
 
 
 .slider{
-	width: 100%;
 	height: 400px;
+	width: 100%;
 	padding: 300px 0px 0px 0px;
 	z-index: 1;
 	top: 0;
@@ -244,10 +242,11 @@ h2{
 	display: none;
 	}
 	
-h1.tagline{
+
+.tagline{
 	width: 1000px;
 	height: 40px;
-	z-index: 1;	
+	z-index: 8;	
 	color: rgba(0, 0, 0, 0.7);
 	text-align: center;
 	font-family: "brandon-grotesque",sans-serif;
@@ -256,8 +255,8 @@ h1.tagline{
 	margin: 0 auto;
 	text-transform: uppercase;
 	text-decoration: none; 
-
 	}
+	
 					
 .hellotext{
 	color: black;
@@ -311,10 +310,10 @@ h1.tagline{
 
 
 a.button{
-	bottom: -15px;
+	bottom: 33px;
 	margin: 0 auto;
 	position: absolute;
-	color: black;
+	color: rgba(0, 0, 0, 0.28);
 	left: 40%;
 	font-family: "Lato", sans-serif;
 	font-size: 16px;
@@ -337,10 +336,12 @@ a.button.icon-down::before {
 	
 
 .scroller{
-	height: 4000px;
-	width: 100%;
+	height: 1500px;
 	z-index: 4;
 	position: relative;
+	background-color: white;
+	margin-left: 92px;
+	margin-right: 92px;
 }	
 
 
@@ -349,15 +350,16 @@ a.button.icon-down::before {
 
 
 .intro{
-	height: 300px;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.84);
+	height: 175px;
+	background-color: rgba(255, 255, 255, 1);
 	position: relative;	
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 67px;
+	
 	
 	h2{
-		color: white;
+		color: black;
 		text-align: center;
 		font-size: 34px;
 		padding-top: 60px;
@@ -365,9 +367,9 @@ a.button.icon-down::before {
 	}	 
 	p{		
 		text-align: center;
-	    color: white;
-	    font-size: 23px;
-	    font-weight: 100;
+	    color: black;
+	    font-size: 30px;
+	    font-weight: 300;
 	    line-height: 31px;
 		margin-top: -16px;
 	    }
@@ -382,8 +384,7 @@ a.button.icon-down::before {
 
 .services{
 	height: 300px;
-	width: 100%;
-	background-color: rgba(255, 255, 255, 0.67);
+	background-color: rgba(0, 0, 0, 1);
 	position: relative;	
 	margin-left: auto;
 	margin-right: auto;	
@@ -407,10 +408,10 @@ a.button.icon-down::before {
 		h2{
 			font-size: 30px;
 			text-align: center;
-			color: black;
+			color: white;
 	}
 		p{
-			color: rgba(0, 0, 0, 0.62);
+			color: rgba(255, 248, 248, 1);
 			font-weight: 400;
 			line-height: 24px;
 			font-size: 16px;
@@ -427,7 +428,6 @@ a.button.icon-down::before {
 
 .Fundamentals{
 	height: 600px;
-	width: 100%;
 	background-color: rgba(0, 0, 0, 0.84);
 	position: relative;	
 	margin-left: auto;
@@ -456,7 +456,6 @@ a.button.icon-down::before {
 
 .Lastproject{
 	height: 600px;
-	width: 100%;
 	background-color: rgba(0, 0, 0, 0.84);
 	background-image: url('/images/angar.jpg');
 	background-size: cover;
@@ -523,12 +522,14 @@ a.button.icon-down::before {
 	height: 200px;
 	display: block;
 	width: 100%;
+	top:75px;
+	right:0;
 	position: absolute;
 	background-color: #2f2f2f;
 	z-index: -1;
 	ul{
 		list-style: none;
-		float: right;
+		float: left;
 		-webkit-font-smoothing: subpixel-antialiased;
 		}
 		
@@ -633,18 +634,25 @@ h2.namesfaces{
 
 //КОНТАКТ
 
-.sliderf {
-	height: 1000px;
-	width: 100%;
-	}	
+
+
+.contactform{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 300px;
 	
+}
 
 	.map{
-		background-color: black;
+		background: linear-gradient(-180deg, #002c5b 0%,#03313d 49%,#03313d 49%,#091733 100%);
 	}
 		#mapCanvas {
 			padding:0;
 			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
 			position: fixed;
 			z-index: -1;
 			overflow: hidden;

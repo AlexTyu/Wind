@@ -46,6 +46,10 @@ html
 				each link in navLinks
 					li: a(href=link.href)= link.label
 					
+		//- FOOTER
+					
+	
+					
 
 		//- BODY
 		#body
@@ -64,11 +68,9 @@ html
 			//- The content block should contain the body of your template's content
 			block content
 
-
-		//- FOOTER
-		.container: #footer
-			p.capitalize Design the experience since 2005
-			a.email(href="blog") hi@wind.life
+			#footer
+				p.capitalize Design the experience since 2005
+				a.email(href="blog") hi@wind.life	
 					
 
 

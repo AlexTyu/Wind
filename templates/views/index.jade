@@ -1,68 +1,55 @@
 extends ../layouts/default
 	
 block content
-	script(src='/script/dojo.js')
-	script(src='/script/windy.js')
-	script(src='http://js.arcgis.com/3.8compact')
-	script(src='/script/wind.js')
+
+	.body
+		.home
+			//vertical
+			.slider
+				#error Unfortunately, your browser does not support all of the required features. Go away	
+				canvas#render(width='1', height='1')
+				script(src='/script/tree/shared.js')          
+				script(src='/script/tree/ui.js')           
+				script(src='/script/tree/flow.js')
+				script(src='/script/tree/main.js')
+				script(src='/script/tagline.js')
+				
+				.tagline We are the Wind. Hi.
+				.helloblock
+								
+					.hellotext The Wind is a San Francisco based Design team. <br> We feel the internet, think brands, empowered by design-thinking and thirst for perfection. <br>Practical & aesthetic design is our primary cause and ultimate motivation. 
+				
+				a.button.icon-down(onclick="$('.projects').addClass('vis');$('.home').addClass('invis')") Who we are and what we do		
+		
+			.scroller 
+				.intro
+					
+					p We are brainsick humans, designers, artists & scientists. <br>We feel the internet, think brands, empowered by design-thinking <br>and forced by thirst for perfection. Practical & aesthetic design is <br>our primary cause and ultimate motivation. 
 	
-	//.vertical
-	.slider
-		#error Unfortunately, your browser does not support all of the required features. Go away	
-		canvas#render(width='1', height='1')
-		script(src='/script/tree/shared.js')          
-		script(src='/script/tree/ui.js')           
-		script(src='/script/tree/flow.js')
-		script(src='/script/tree/main.js')
-		script(type='text/javascript').
-			(function($) {$('[data-typer-targets]').typer(); $.typer.options.clearOnHighlight=false;})(jQuery);
+				.services
+					.serviceblock
+					//h2 Design the experience
+						.block
+							h2 Branding & Identity 
+							p Brand is something people perceive therefore experience. This experience must at all times be distinctive in order to relay the right message and realize its primary cause. We achieve this by a multi-level analysis and implementation of technologies designed to achieve an objective.
+								
+						.block
+							h2 Interaction
+							p Right experience is always conducted through interaction which presumes an interface. Thereby, in order to ensure the quality of interaction all the touchpoints i.e. products, websites, mobile apps, print or advertising must embody a thought-out minimalistic interface.
+					
+					
+				.Fundamentals
 			
-			
-		script(type='text/javascript').
-			$(window).scroll(function() {    
-				var scroll = $(window).scrollTop();
-				if (scroll >= 500) {
-					$(".header").addClass(".scrollcolor");
-				} else {
-					$(".header").removeClass(".scrollcolor");
-					}
-				});
-		
-		h1.tagline Hello. We are the Wind
-		.helloblock
-						
-			.hellotext The Wind is a San Francisco based Design team. <br> We feel the internet, think brands, empowered by design-thinking and thirst for perfection. <br>Practical & aesthetic design is our primary cause and ultimate motivation. 
-		
-		a.button.icon-down(onclick="$('.projects').addClass('vis');$('.home').addClass('invis')") Who we are and what we do		
+	
+					
+				//.Lastproject
+					h2 < Design Thinking >
+					p Thousands of years humanity has been creating tools, improving life and reaching global and personal goals. <br>Nothing changes: technologies evolve - principle remains. 
+					p.number Wind Fundamental 1 of 9
+					
 
-	.scroller 
-		.whatwedo
-			.intro
-				h2 Design the experience
-				p We are brainsick humans, designers, developers and brand experts. <br>We feel the internet, think brands, empowered by design-thinking <br>and forced by thirst for perfection. Practical & aesthetic design is <br>our primary cause and ultimate motivation. 
-
-			.services
-				.serviceblock
-					.block
-						h2 Branding & Identity 
-						p Brand is something people perceive therefore experience. This experience must at all times be distinctive in order to relay the right message and realize its primary cause. We achieve this by a multi-level analysis and implementation of technologies designed to achieve an objective.
-							
-					.block
-						h2 Interaction
-						p Right experience is always conducted through interaction which presumes an interface. Thereby, in order to ensure the quality of interaction all the touchpoints i.e. products, websites, mobile apps, print or advertising must embody a thought-out minimalistic interface.
-				
-				
-			.Fundamentals
-				h2 < Design Thinking >
-				p Thousands of years humanity has been creating tools, improving life and reaching global and personal goals. <br>Nothing changes: technologies evolve - principle remains. 
-				p.number Wind Fundamental 1 of 9
-				
-			.Lastproject
-				h2 < Design Thinking >
-				p Thousands of years humanity has been creating tools, improving life and reaching global and personal goals. <br>Nothing changes: technologies evolve - principle remains. 
-				p.number Wind Fundamental 1 of 9
-				
-
+					
+	
 		
 	
 	
