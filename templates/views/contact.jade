@@ -1,16 +1,16 @@
 extends ../layouts/default
 
-block intro
-	.container
-		h1 Contact Us
-		
 block content
-	script(src='/script/contact.js')
-	script(src='http://brangerbriz.net/labs/threejs_playGnd/js/three.min.js')
-	script(src='http://brangerbriz.net/labs/threejs_playGnd/js/Detector.js')
+	script(src='/script/dojo.js')
+	script(src='/script/windy.js')
+	script(src='http://js.arcgis.com/3.8compact')
+	script(src='/script/wind.js')
+	.slider
+		.map
+			#mapCanvas
+	.tagline
 	
-	.container
-	
+		
 		if enquirySubmitted
 			h3 Thanks for getting in touch.
 		else

@@ -6,23 +6,22 @@ block content
 	script(src='http://js.arcgis.com/3.8compact')
 	script(src='/script/wind.js')
 	
-	body
+	.vertical
+	.slider
 		#error Unfortunately, your browser does not support all of the required features. Go away	
 		canvas#render(width='1', height='1')
 		script(src='/script/tree/shared.js')          
 		script(src='/script/tree/ui.js')           
 		script(src='/script/tree/flow.js')
 		script(src='/script/tree/main.js')
+		.helloblock
+			h2.tagline Hello. We are the Wind	
+					
+			.hellotext The Wind is a San Francisco based Design team. <br> We feel the internet, think brands, empowered by design-thinking and thirst for perfection. <br>Practical & aesthetic design is our primary cause and ultimate motivation. 
 		
-		.home.content
-		
-			.helloblock
-				h2.tagline Hello. We are the Wind			
-				.hellotext The Wind is a San Francisco based Design team. <br> We feel the internet, think brands and empowered by design-thinking & thirst for perfection. <br>Practical design is our primary cause and ultimate motivation. 
-			
 			a.button(onclick="$('.projects').addClass('vis');$('.home').addClass('invis')") We Do >		
-		//.projects
-		//	.content
+
+	.scroller 
 
 		
 	
