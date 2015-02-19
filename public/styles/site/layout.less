@@ -75,6 +75,15 @@ body{
 	}
 
 
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+
+
 
 p{
 	font-family: Lato;
@@ -135,9 +144,14 @@ h2{
 				font-weight: 700;
 				text-transform: uppercase;
 				text-decoration: none; 
+				.scrollcolor{
+					color: white;
+					}
+				}
 			}
 		}
-	}
+		
+	
 	
 	
 	
@@ -218,35 +232,33 @@ h2{
 	position: absolute;
 }
 
-	
+
+
+
 .helloblock{
 	height: 200px;
 	width: 450px;
-	-moz-animation: movebox 1s, fadein 2s;  /* Firefox */
-	-webkit-animation: movebox 1s, fadein 2s;  /* Safari and Chrome */
-	-o-animation: movebox 1s, fadein 2s;  /* Opera */
+	-moz-animation: movebox 1s, fadein 2s;  
+	-webkit-animation: movebox 1s, fadein 2s;  
+	-o-animation: movebox 1s, fadein 2s; 
+	display: none;
 	}
 	
-h2.tagline{
-	background: black;
-	width: 250px;
+h1.tagline{
+	width: 1000px;
 	height: 40px;
 	z-index: 1;	
-	color: white;
+	color: rgba(0, 0, 0, 0.7);
 	text-align: center;
 	font-family: "brandon-grotesque",sans-serif;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 43px;
-	margin: 0 0 0 15px;
+	font-size: 71px;
+	font-weight: 800;
+	margin: 0 auto;
 	text-transform: uppercase;
-	border-radius: 10px;
 	text-decoration: none; 
-	-webkit-font-smoothing: subpixel-antialiased;
-		.second{
-			width: 100px;
-		}
-	}				
+
+	}
+					
 .hellotext{
 	color: black;
 	font-family: "Lato",sans-serif;
@@ -257,7 +269,12 @@ h2.tagline{
 	text-decoration: none; 
 	line-height: 26px;
 	-webkit-font-smoothing: subpixel-antialiased;
-	}			
+	}		
+	
+	
+		
+
+		
 		
 
 //FLOWANIMATION
@@ -294,12 +311,11 @@ h2.tagline{
 
 
 a.button{
-	height: 40px;
-	width: 280px;
-	bottom: 10px;
-	left: 150px;
+	bottom: -15px;
+	margin: 0 auto;
 	position: absolute;
 	color: black;
+	left: 40%;
 	font-family: "Lato", sans-serif;
 	font-size: 16px;
 	line-height: 40px;
@@ -327,15 +343,19 @@ a.button.icon-down::before {
 	position: relative;
 }	
 
+
+
+
+
+
 .intro{
 	height: 300px;
-	width: 1200px;
+	width: 100%;
 	background-color: rgba(0, 0, 0, 0.84);
 	position: relative;	
 	margin-left: auto;
 	margin-right: auto;
-	border-top-left-radius: 10px;	
-	border-top-right-radius: 10px;	
+	
 	h2{
 		color: white;
 		text-align: center;
@@ -354,27 +374,21 @@ a.button.icon-down::before {
 	
 }
 
+
+
+
+
+
+
 .services{
 	height: 300px;
-	width: 1200px;
+	width: 100%;
 	background-color: rgba(255, 255, 255, 0.67);
 	position: relative;	
 	margin-left: auto;
-	margin-right: auto;
-	border-bottom-left-radius: 10px;	
-	border-bottom-right-radius: 10px;	
+	margin-right: auto;	
 	}
-	h2{
-		font-size: 30px;
-		text-align: center;
-	}
-	p{
-		color: rgba(0, 0, 0, 0.62);
-		font-weight: 400;
-		line-height: 24px;
-		font-size: 16px;
-		margin-top: -10px;
-	}
+
 	
 		
 .serviceblock{
@@ -389,7 +403,85 @@ a.button.icon-down::before {
 	height: 200px;
 	width: 424px;
 	position: relative;
-	padding-right: 76px;
+	margin: -11px 0 0 59px;
+		h2{
+			font-size: 30px;
+			text-align: center;
+			color: black;
+	}
+		p{
+			color: rgba(0, 0, 0, 0.62);
+			font-weight: 400;
+			line-height: 24px;
+			font-size: 16px;
+			margin-top: -10px;
+	}
+}
+
+
+
+
+
+
+
+
+.Fundamentals{
+	height: 600px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.84);
+	position: relative;	
+	margin-left: auto;
+	margin-right: auto;
+	h2{
+		color: white;
+		text-align: center;
+		font-size: 34px;
+		padding-top: 60px;
+		
+	}	 
+	p{		
+		text-align: center;
+	    color: white;
+	    font-size: 23px;
+	    font-weight: 100;
+	    line-height: 31px;
+		margin-top: -16px;
+	    }
+	p.number{
+		color: gray;
+		font-size: 15px;
+	}
+}
+
+
+.Lastproject{
+	height: 600px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.84);
+	background-image: url('/images/angar.jpg');
+	background-size: cover;
+	position: relative;	
+	margin-left: auto;
+	margin-right: auto;
+	h2{
+		color: white;
+		text-align: center;
+		font-size: 34px;
+		padding-top: 60px;
+		
+	}	 
+	p{		
+		text-align: center;
+	    color: white;
+	    font-size: 23px;
+	    font-weight: 100;
+	    line-height: 31px;
+		margin-top: -16px;
+	    }
+	p.number{
+		color: gray;
+		font-size: 15px;
+	}
 }
 
 
