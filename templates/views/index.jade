@@ -6,7 +6,7 @@ block content
 	script(src='http://js.arcgis.com/3.8compact')
 	script(src='/script/wind.js')
 	
-	.vertical
+	//.vertical
 	.slider
 		#error Unfortunately, your browser does not support all of the required features. Go away	
 		canvas#render(width='1', height='1')
@@ -19,9 +19,24 @@ block content
 					
 			.hellotext The Wind is a San Francisco based Design team. <br> We feel the internet, think brands, empowered by design-thinking and thirst for perfection. <br>Practical & aesthetic design is our primary cause and ultimate motivation. 
 		
-			a.button(onclick="$('.projects').addClass('vis');$('.home').addClass('invis')") We Do >		
+			a.button.icon-down(onclick="$('.projects').addClass('vis');$('.home').addClass('invis')") What we do		
 
 	.scroller 
+		.whatwedo
+			.intro
+				h2 Design the experience
+				p We are people and also brand experts, designers and developers. <br>We expertize in creating and enhancing brands, websites and products. <br>Our main focus is not quantity, but quality and the depth of development. <br>If we take a project – we’re sure we can do it well.
+
+			.services
+				.serviceblock
+					.block
+						h2 Branding & Identity
+						p Brand is something people perceive therefore experience. This experience must at all times be distinctive in order to relay the right message and realize its primary cause. This can be achieved by a multi-level analysis and implementation of technologies designed to achieve an objective.
+							
+					.block
+						h2 Interaction
+						p Right experience is always conducted through interaction which presumes an interface. Thereby, in order to ensure the quality of interaction all the touchpoints i.e. products, websites, mobile apps, print or advertising must embody a thought-out minimalistic interface.
+				
 
 		
 	
