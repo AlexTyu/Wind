@@ -271,6 +271,7 @@ h2{
 	}		
 	
 	
+
 		
 
 		
@@ -305,6 +306,7 @@ h2{
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
     -o-animation: fadein 2s; /* Opera */
+    -webkit-transform: scaleX(-1);
 }
 
 
@@ -342,6 +344,9 @@ a.button.icon-down::before {
 	background-color: white;
 	margin-left: 92px;
 	margin-right: 92px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
 }	
 
 
@@ -350,13 +355,15 @@ a.button.icon-down::before {
 
 
 .intro{
-	height: 175px;
+	height: 283px;
 	background-color: rgba(255, 255, 255, 1);
 	position: relative;	
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 67px;
-	
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+		
 	
 	h2{
 		color: black;
@@ -369,12 +376,38 @@ a.button.icon-down::before {
 		text-align: center;
 	    color: black;
 	    font-size: 30px;
-	    font-weight: 300;
-	    line-height: 31px;
+	    font-weight: 200;
+	    line-height: 37px;
 		margin-top: -16px;
 	    }
+	    
+.prbutton{
+	width: 170px;
+	height: 30px;
+	margin: 0 auto;
+	position: relative;
+	border-bottom: 3px solid black;
+
+}    
+	.projectslink{
+		bottom: 33px;		
+		margin: 0 auto;
+		position: absolute;
+		color: rgba(0, 0, 0, 1);
+		text-align: center;
+		font-family: "Brandon-grotesque", sans-serif;
+		font-size: 18px;
+		line-height: 40px;
+		font-weight: 600;
+		text-transform: uppercase;
+
+		-webkit-font-smoothing: subpixel-antialiased;
+		z-index: 6;
+		}
 	
 }
+
+
 
 
 
@@ -397,6 +430,9 @@ a.button.icon-down::before {
 	height: 400px;
 	margin: 0 auto;	
 	padding-top: 33px;
+	h2{
+		color: white;
+	}
 }
 	
 .block{
@@ -405,6 +441,7 @@ a.button.icon-down::before {
 	width: 424px;
 	position: relative;
 	margin: -11px 0 0 59px;
+	z-index: 8;
 		h2{
 			font-size: 30px;
 			text-align: center;
@@ -521,9 +558,9 @@ a.button.icon-down::before {
 #categories{
 	height: 200px;
 	display: block;
-	width: 100%;
 	top:75px;
-	right:0;
+	margin-left: 92px;
+	margin-right: 92px;
 	position: absolute;
 	background-color: #2f2f2f;
 	z-index: -1;
