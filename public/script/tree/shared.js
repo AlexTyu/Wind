@@ -5,8 +5,8 @@ var PRESIMULATION_DELTA_TIME = 0.1;
 var QUALITY_LEVELS = [
     {
         resolution: [512, 512],
-        diameter: 0.01,
-        alpha: 0.3
+        diameter: 0.008,
+        alpha: 0.5
     }];
 
 var OPACITY_TEXTURE_RESOLUTION = 1024;
@@ -26,7 +26,7 @@ var BASE_SPEED = 0.2;
 
 var PARTICLE_SATURATION = 0.75;
 var PARTICLE_VALUE = 1.0;
-var PARTICLE_OPACITY_SCALE = 0.75;
+var PARTICLE_OPACITY_SCALE = 0.55;
 
 var BACKGROUND_DISTANCE_SCALE = 0.1;
 
@@ -64,7 +64,7 @@ var CAMERA_ORBIT_POINT = [1.8, 0.0, 0.0];
 
 var CAMERA_SENSITIVITY = 0.005;
 
-var INITIAL_SPEED = 1;
+var INITIAL_SPEED = 1.5;
 var INITIAL_TURBULENCE = 0.2;
 
 

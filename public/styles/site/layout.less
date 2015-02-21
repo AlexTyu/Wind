@@ -223,7 +223,6 @@ h2{
 .slider{
 	height: 400px;
 	width: 100%;
-	padding: 300px 0px 0px 0px;
 	z-index: 1;
 	top: 0;
 	left: 0;
@@ -244,11 +243,14 @@ h2{
 	
 
 .tagline{
-	width: 1000px;
+	width: 100%;
 	height: 40px;
 	z-index: 8;	
-	color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	margin-left: 0 auto;
 	text-align: center;
+	top: 40%;
+	color: rgba(0, 0, 0, 0.7);
 	font-family: "brandon-grotesque",sans-serif;
 	font-size: 71px;
 	font-weight: 800;
@@ -300,19 +302,30 @@ h2{
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
     z-index: -2;
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
     -o-animation: fadein 2s; /* Opera */
     -webkit-transform: scaleX(-1);
+
+
 }
+
+    .circle{
+	    width:30px;
+	    height:30px;
+	    color: black;
+	    border-radius: 30px;
+	    position: fixed;
+	    top: 500px;
+	    right: 500px;
+	    z-index: 4;
+	    }
 
 
 
 a.button{
-	bottom: 33px;
+	bottom: 10%;
 	margin: 0 auto;
 	position: absolute;
 	color: rgba(0, 0, 0, 0.28);
@@ -555,7 +568,7 @@ a.button.icon-down::before {
 
 
 
-#categories{
+.categories{
 	height: 200px;
 	display: block;
 	top:75px;
@@ -572,7 +585,6 @@ a.button.icon-down::before {
 		
 		li{
 			float:left;
-			padding: 30px 40px 0 10px;
 			color: #fff;
 			font-family: "brandon-grotesque",sans-serif;
 			font-size: 13px;
