@@ -40,11 +40,13 @@ html
 	body(class=section)
 
 		//- HEADER
-		#header: .container
-			#symbol
+		.header(onmouseover="$('.header').toggleClass('vis');$('.symbol').toggleClass('white');$('ul li a').toggleClass('white');$('.hamburger').toggleClass('white')")
+			.symbol
+			.hamburger
 			ul
 				each link in navLinks
 					li: a(href=link.href)= link.label
+			
 					
 		//- FOOTER
 					

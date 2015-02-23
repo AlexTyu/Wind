@@ -12,12 +12,17 @@
     to   { opacity: 1; }
 }
 	
-#body{
+#body
     .home{
 		padding-top: 700px;
 		}
-
+	.portfolio{
+		margin: 0px;
+		background-color: #e3e3e3;
+	
 }
+
+
 
 
 
@@ -79,15 +84,6 @@
 	}
 
 
-@keyframes type{
-    from { width: 0; }
-}
-
-@-webkit-keyframes type{
-    from { width: 0; }
-}
-
-
 
 p{
 	font-family: Lato;
@@ -102,60 +98,90 @@ h2{
 //HEADER
 
 
-#header {
-	height: 78px;
-	display: block;
-	width: 100%;
+.header{
+			height: 78px;
+			display: block;
+			width: 100%;
+			position: fixed;
+			background-color: rgba(0, 0, 0, 0);
+			top: 0;
+			left: 0;
+			z-index: 10;
+			-webkit-transition: 0.3s linear;
+			}
+			
+.header.vis{
+			background-color: rgba(0, 0, 0, 1);
+			}
+		
+	
+.hamburger{
+	height: 25px;
+	width: 25px;
+	background-image: url('/images/hamburger.svg');
+	background-repeat: no-repeat;
+	float: right;
+	margin: 30px 45px 0 -13px;
+	background-size: contain; 
+	z-index: 11;
+
+	}
+	
+.hamburger.white{
+	background-image: url('/images/hamburgerwhite.svg');
+	height: 25px;
+	width: 25px;
+	background-repeat: no-repeat;
+	float: right;
+	margin: 30px 45px 0 -13px;
+	background-size: contain; 
+	z-index: 11;
+
+	
+}
+		
+
+		
+.symbol {
+	height: 40px;
+	width: 150px;
+	background-image: url('/images/wb.svg');
+	background-repeat: no-repeat;
 	position: fixed;
-	background-color: rgba(0,  0,  0, 0);
-	top: 0;
-	z-index: 10;
+	background-size: 45px;
+	margin: 25px 0 0 21px;
+	}
+	
+.symbol.white {
+	background-image: url('/images/w.svg');
+	}
+	
+	
+
+ul{
+	margin: 0 0 0 0;
+	padding: 0;
+	list-style: none;
+	-webkit-font-smoothing: subpixel-antialiased;	
+	float: right;
+	li{
+		float:left;
+		padding: 30px 40px 0 10px;
+		a{
+			color: rgba(0, 0, 0, 1);
+			font-family: "brandon-grotesque",sans-serif;
+			font-size: 13px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-decoration: none; 
+			}
+		
+		}
 	}
 
-
-	
-	#logo {
-		height: 40px;
-		width: 150px;
-		background-image: url('/images/wind.svg');
-		background-repeat: no-repeat;
-		margin: 26px 0 0 43px;
-		}
-		
-	#symbol {
-		height: 40px;
-		width: 150px;
-		background-image: url('/images/wb.svg');
-		background-repeat: no-repeat;
-		position: fixed;
-		background-size: 45px;
-		margin: 25px 0 0 21px;
-		}
-	
-	ul{
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		float: right;
-		-webkit-font-smoothing: subpixel-antialiased;
-		li{
-			float:left;
-			padding: 30px 40px 0 10px;
-			a{
-				color: #000;
-				font-family: "brandon-grotesque",sans-serif;
-				font-size: 13px;
-				font-weight: 700;
-				text-transform: uppercase;
-				text-decoration: none; 
-				.scrollcolor{
-					color: white;
-					}
-				}
-			}
-		}
-		
-		
+.white{
+			color: rgba(255, 255, 255, 1);
+		}	
 	
 	
 	
@@ -171,6 +197,7 @@ h2{
     left: 0;
     height: 78px;
     width: 100%;
+    bottom: 0;
     background-color: black;
 	z-index: 6;
 	}
@@ -221,7 +248,7 @@ h2{
 
 
 .slider{
-	height: 400px;
+	height: 700px;
 	width: 100%;
 	z-index: 1;
 	top: 0;
@@ -248,12 +275,13 @@ h2{
 	z-index: 8;	
 	position: fixed;
 	margin-left: 0 auto;
-	text-align: center;
-	top: 40%;
-	color: rgba(0, 0, 0, 0.7);
+	text-align: right;
+	right: 120px;
+	top: 42%;
+	color: rgba(18, 19, 37, 0.91);
 	font-family: "brandon-grotesque",sans-serif;
-	font-size: 71px;
-	font-weight: 800;
+	font-size: 47px;
+	font-weight: 600;
 	margin: 0 auto;
 	text-transform: uppercase;
 	text-decoration: none; 
@@ -325,7 +353,7 @@ h2{
 
 
 a.button{
-	bottom: 10%;
+	bottom: 30px;
 	margin: 0 auto;
 	position: absolute;
 	color: rgba(0, 0, 0, 0.28);
@@ -351,10 +379,9 @@ a.button.icon-down::before {
 	
 
 .scroller{
-	height: 1500px;
+	height: 670px;
 	z-index: 4;
 	position: relative;
-	background-color: white;
 	margin-left: 92px;
 	margin-right: 92px;
 	border-top-left-radius: 20px;
@@ -368,8 +395,8 @@ a.button.icon-down::before {
 
 
 .intro{
-	height: 283px;
-	background-color: rgba(255, 255, 255, 1);
+	height: 192px;
+	background-color: rgba(255, 255, 255, 0.96);
 	position: relative;	
 	margin-left: auto;
 	margin-right: auto;
@@ -379,10 +406,10 @@ a.button.icon-down::before {
 		
 	
 	h2{
-		color: black;
+		color: white;
 		text-align: center;
 		font-size: 34px;
-		padding-top: 60px;
+
 		
 	}	 
 	p{		
@@ -393,32 +420,41 @@ a.button.icon-down::before {
 	    line-height: 37px;
 		margin-top: -16px;
 	    }
+	}
 	    
 .prbutton{
-	width: 170px;
+	width: 138px;
 	height: 30px;
 	margin: 0 auto;
 	position: relative;
-	border-bottom: 3px solid black;
+	display: inline;
+	border-bottom: 3px solid rgb(0, 142, 255);
 
 }    
-	.projectslink{
-		bottom: 33px;		
-		margin: 0 auto;
-		position: absolute;
-		color: rgba(0, 0, 0, 1);
-		text-align: center;
-		font-family: "Brandon-grotesque", sans-serif;
-		font-size: 18px;
-		line-height: 40px;
-		font-weight: 600;
-		text-transform: uppercase;
 
-		-webkit-font-smoothing: subpixel-antialiased;
-		z-index: 6;
-		}
+.projectslinkbox{
+	width: 100%;
+	display:block;
+	margin:0 44%;
 	
-}
+	}
+	
+.projectslink{
+	bottom: 52px;		
+	position: absolute;
+	color: rgba(0, 0, 0, 1);
+	text-align: center;
+	margin: 0 auto;
+	font-family: "Brandon-grotesque", sans-serif;
+	font-size: 15px;
+	line-height: 40px;
+	font-weight: 600;
+	text-transform: uppercase;
+	-webkit-font-smoothing: subpixel-antialiased;
+	z-index: 6;
+	}
+	
+
 
 
 
@@ -430,10 +466,12 @@ a.button.icon-down::before {
 
 .services{
 	height: 300px;
-	background-color: rgba(0, 0, 0, 1);
+	background-color: rgba(0, 0, 0, 0.94);
 	position: relative;	
 	margin-left: auto;
 	margin-right: auto;	
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 	}
 
 	
@@ -443,6 +481,8 @@ a.button.icon-down::before {
 	height: 400px;
 	margin: 0 auto;	
 	padding-top: 33px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 	h2{
 		color: white;
 	}
@@ -461,7 +501,7 @@ a.button.icon-down::before {
 			color: white;
 	}
 		p{
-			color: rgba(255, 248, 248, 1);
+			color: rgba(255, 255, 255, 1);
 			font-weight: 400;
 			line-height: 24px;
 			font-size: 16px;
@@ -477,7 +517,7 @@ a.button.icon-down::before {
 
 
 .Fundamentals{
-	height: 600px;
+	height: 474px;
 	background-color: rgba(0, 0, 0, 0.84);
 	position: relative;	
 	margin-left: auto;
@@ -486,7 +526,7 @@ a.button.icon-down::before {
 		color: white;
 		text-align: center;
 		font-size: 34px;
-		padding-top: 60px;
+
 		
 	}	 
 	p{		
@@ -505,18 +545,20 @@ a.button.icon-down::before {
 
 
 .Lastproject{
-	height: 600px;
-	background-color: rgba(0, 0, 0, 0.84);
-	background-image: url('/images/angar.jpg');
-	background-size: cover;
+	height: 474px;
+	background-color: rgba(0, 0, 0, 0.85);
 	position: relative;	
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0px 92px 0 92px;
+	padding-top: 160px;
+	background-image: url('/images/angar.jpg');
+	background-size: contain;
+	}
+	
 	h2{
 		color: white;
 		text-align: center;
 		font-size: 34px;
-		padding-top: 60px;
+
 		
 	}	 
 	p{		
@@ -531,7 +573,7 @@ a.button.icon-down::before {
 		color: gray;
 		font-size: 15px;
 	}
-}
+
 
 
 
@@ -569,14 +611,14 @@ a.button.icon-down::before {
 
 
 .categories{
-	height: 200px;
-	display: block;
-	top:75px;
+	height: 71px;
+	background-color: #2f2f2f;
+	position: fixed;
+	z-index: 12;
+	top: 78px;
 	margin-left: 92px;
 	margin-right: 92px;
-	position: absolute;
-	background-color: #2f2f2f;
-	z-index: -1;
+
 	ul{
 		list-style: none;
 		float: left;
@@ -585,6 +627,7 @@ a.button.icon-down::before {
 		
 		li{
 			float:left;
+			text-align: center;
 			color: #fff;
 			font-family: "brandon-grotesque",sans-serif;
 			font-size: 13px;
@@ -596,9 +639,11 @@ a.button.icon-down::before {
 			
 
 .projects{
-	width: 100%;
 	height: 100%;
-	padding: 200px 0 0 0;
+	margin-top: 22px;
+	float: left;
+
+	
 }
 	
 	
@@ -606,7 +651,10 @@ a.button.icon-down::before {
 .project{
 	float:left;
 	width: 500px;
+	height: 300px;
+	background-size: cover;
 	padding:0px;
+	overflow: hidden;
 	}
 	
 	img{
@@ -709,9 +757,7 @@ h2.namesfaces{
 			-moz-animation: fadein 2s; /* Firefox */
 			-webkit-animation: fadein 2s; /* Safari and Chrome */
 			-o-animation: fadein 2s; /* Opera */
-				
-			
-			}
+		}
 
 
 

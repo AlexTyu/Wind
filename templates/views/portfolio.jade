@@ -1,26 +1,27 @@
 extends ../layouts/default
 	
 block content
-	.Lastproject
+	body.portfolio
+		
+		
 	.categories
 		ul
 			li Advertising    
 			li App   			
 			li Branding   
-			li Industrial Design  
+			li Product Design  
 			li Naming  			
 			li Package   
 			li Photography  
 			li Print   
 			li Web   
 			li Everything
-
-			
-	.projects
-	
-		#project
-			each portfolio in portfolios
-				a.project(href="/portfolio/"+portfolio.key)
-					//h2= portfolio.name
-					img(src="../../files/"+portfolio.image.filename)
+				
+				
+		.projects
+			#project
+				each portfolio in portfolios
+					a.project(href="/portfolio/"+portfolio.key)
+						//h2= portfolio.name
+						img(src="../../files/"+portfolio.image.filename)
 				
