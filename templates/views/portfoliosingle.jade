@@ -2,6 +2,17 @@ extends ../layouts/default
 
 block content
 	.single-portfolio
-		h1= data.portfolio.name
-		img(src="../../files/"+data.portfolio.image.filename)
-	
+		.projectscroller
+			.cover
+				video#videocover(autoplay='', loop='', poster='54.183.64.164/raw-media/first-frame-screencap', muted='')
+					source(src="../files/"+data.portfolio.videocover.filename, type='video/mp4') 
+			
+			.Description
+			
+				h1= data.portfolio.name
+			
+				h2 Objective
+				
+			//h1= data.portfolio
+			//img(src="../../files/"+data.portfolio.image.filename)
+		

@@ -1,10 +1,14 @@
+html, body {margin:0;padding:0; background-color: #dddddd}
+
 @windblack: rgba(0, 0, 0, 0.93); //Plashka 
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
 
-
+.clear{
+	clear: both;
+}
 
 
 @-moz-keyframes fadein {
@@ -12,21 +16,25 @@
     to   { opacity: 1; }
 }
 	
-#body
+#body{
     .home{
-		padding-top: 700px;
+		padding: 700px 0 0 0;
+		background-color: #dddddd;
+		top:0;
+		left: 0;
 		}
+		
 	.portfolio{
 		margin: 0px;
 		background-color: #e3e3e3;
-	
+		}
+		
+	.single-portfolio{
+		background-color: #dddddd;
+		top:0;
+		left: 0;
+		}
 }
-
-
-
-
-
-
 
 
 
@@ -103,7 +111,7 @@ h2{
 			display: block;
 			width: 100%;
 			position: fixed;
-			background-color: rgba(0, 0, 0, 0);
+			background-color: rgba(255, 255, 255, 0);
 			top: 0;
 			left: 0;
 			z-index: 10;
@@ -166,13 +174,13 @@ ul{
 	float: right;
 	li{
 		float:left;
-		padding: 30px 40px 0 10px;
+		padding: 16px 31px 0 10px;
 		a{
 			color: rgba(0, 0, 0, 1);
 			font-family: "brandon-grotesque",sans-serif;
-			font-size: 13px;
-			font-weight: 700;
-			text-transform: uppercase;
+			font-size: 17px;
+			font-weight: 300;
+			
 			text-decoration: none; 
 			}
 		
@@ -198,6 +206,7 @@ ul{
     height: 78px;
     width: 100%;
     bottom: 0;
+    visibility: hidden;
     background-color: black;
 	z-index: 6;
 	}
@@ -231,21 +240,6 @@ ul{
 
 
 
-//HOMEPAGE
-
-
-
-.vertical{
-	height: 100%;
-	width: 85px;
-	background-color: #041C2D;
-	position: fixed;
-	left: 0;
-	top:0;
-	z-index: 6;
-	
-}
-
 
 .slider{
 	height: 700px;
@@ -259,50 +253,25 @@ ul{
 
 
 
-.helloblock{
-	height: 200px;
-	width: 450px;
-	-moz-animation: movebox 1s, fadein 2s;  
-	-webkit-animation: movebox 1s, fadein 2s;  
-	-o-animation: movebox 1s, fadein 2s; 
-	display: none;
-	}
-	
-
 .tagline{
 	width: 100%;
 	height: 40px;
 	z-index: 8;	
-	position: fixed;
+	position: absolute;
 	margin-left: 0 auto;
 	text-align: right;
 	right: 120px;
 	top: 42%;
-	color: rgba(18, 19, 37, 0.91);
+	color: black;
 	font-family: "brandon-grotesque",sans-serif;
 	font-size: 47px;
-	font-weight: 600;
+	font-weight: 800;
 	margin: 0 auto;
 	text-transform: uppercase;
 	text-decoration: none; 
 	}
 	
 					
-.hellotext{
-	color: black;
-	font-family: "Lato",sans-serif;
-	font-size: 18px;
-	font-weight: 300;
-	margin: 7px 0 0 18px;
-	top:0;
-	text-decoration: none; 
-	line-height: 26px;
-	-webkit-font-smoothing: subpixel-antialiased;
-	}		
-	
-	
-
-		
 
 		
 		
@@ -327,7 +296,7 @@ ul{
 }
 
 #render {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
@@ -339,25 +308,21 @@ ul{
 
 }
 
-    .circle{
-	    width:30px;
-	    height:30px;
-	    color: black;
-	    border-radius: 30px;
-	    position: fixed;
-	    top: 500px;
-	    right: 500px;
-	    z-index: 4;
-	    }
 
 
 
+.arrow{
+	margin-top: -200px;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 300px;
+	position: relative;
+	}
+	
 a.button{
-	bottom: 30px;
-	margin: 0 auto;
-	position: absolute;
+	
 	color: rgba(0, 0, 0, 0.28);
-	left: 40%;
 	font-family: "Lato", sans-serif;
 	font-size: 16px;
 	line-height: 40px;
@@ -379,11 +344,10 @@ a.button.icon-down::before {
 	
 
 .scroller{
-	height: 670px;
+	width: 100%;
+	height: 1400px;
 	z-index: 4;
 	position: relative;
-	margin-left: 92px;
-	margin-right: 92px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 
@@ -395,14 +359,15 @@ a.button.icon-down::before {
 
 
 .intro{
+	width: 1100px;
 	height: 192px;
-	background-color: rgba(255, 255, 255, 0.96);
+	background-color: rgba(0, 0, 0, 0.96);
 	position: relative;	
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 67px;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
+	
+
 		
 	
 	h2{
@@ -414,7 +379,7 @@ a.button.icon-down::before {
 	}	 
 	p{		
 		text-align: center;
-	    color: black;
+	    color: white;
 	    font-size: 30px;
 	    font-weight: 200;
 	    line-height: 37px;
@@ -455,7 +420,21 @@ a.button.icon-down::before {
 	}
 	
 
-
+.wedo{
+	height: 192px;
+	width: 500px;
+	position: relative;	
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 67px;
+	border-radius: 20px;
+	p{
+		color: black;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 20px;
+	}
+}
 
 
 
@@ -466,12 +445,12 @@ a.button.icon-down::before {
 
 .services{
 	height: 300px;
-	background-color: rgba(0, 0, 0, 0.94);
 	position: relative;	
 	margin-left: auto;
 	margin-right: auto;	
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
+	margin-top: 200px;
+	border-radius: 20px;
+
 	}
 
 	
@@ -481,8 +460,6 @@ a.button.icon-down::before {
 	height: 400px;
 	margin: 0 auto;	
 	padding-top: 33px;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
 	h2{
 		color: white;
 	}
@@ -498,10 +475,10 @@ a.button.icon-down::before {
 		h2{
 			font-size: 30px;
 			text-align: center;
-			color: white;
+			color: Black;
 	}
 		p{
-			color: rgba(255, 255, 255, 1);
+			color: black;
 			font-weight: 400;
 			line-height: 24px;
 			font-size: 16px;
@@ -514,75 +491,58 @@ a.button.icon-down::before {
 
 
 
-
-
-.Fundamentals{
-	height: 474px;
-	background-color: rgba(0, 0, 0, 0.84);
-	position: relative;	
-	margin-left: auto;
-	margin-right: auto;
-	h2{
-		color: white;
-		text-align: center;
-		font-size: 34px;
-
+.Principles{
+	background: linear-gradient(-180deg, #000000 0, #001C36 100%);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+		h2{
+			color: white;
+			width: 100%;
+			position: absolute;
+			margin-top: 80px;
+			margin-left: auto;
+			margin-right: auto;
+			overflow: auto;
+			font-size: 34px;	
+		}	
+		 
+		p{		
+		    color: white;
+		    width: 100%;
+		    position: absolute;
+		    margin-left: auto;
+			overflow: auto;
+		    font-size: 18px;
+		    font-weight: 300;
+		    line-height: 24px;
+			margin-top: 131px;
+			overflow: auto;
+		}
+		p.number{
+		 	color: white;
+		 	opacity: 0.4;
+		    width: 100%;
+		    position: absolute;
+		    margin-left: auto;
+			overflow: auto;
+		    font-size: 18px;
+		    font-weight: 300;
+		    line-height: 24px;
+			overflow: auto;
+			}
 		
-	}	 
-	p{		
-		text-align: center;
-	    color: white;
-	    font-size: 23px;
-	    font-weight: 100;
-	    line-height: 31px;
-		margin-top: -16px;
-	    }
-	p.number{
-		color: gray;
-		font-size: 15px;
-	}
 }
 
-
-.Lastproject{
-	height: 474px;
-	background-color: rgba(0, 0, 0, 0.85);
-	position: relative;	
-	margin: 0px 92px 0 92px;
-	padding-top: 160px;
-	background-image: url('/images/angar.jpg');
-	background-size: contain;
-	}
-	
-	h2{
-		color: white;
-		text-align: center;
-		font-size: 34px;
-
-		
-	}	 
-	p{		
-		text-align: center;
-	    color: white;
-	    font-size: 23px;
-	    font-weight: 100;
-	    line-height: 31px;
-		margin-top: -16px;
-	    }
-	p.number{
-		color: gray;
-		font-size: 15px;
-	}
-
-
-
-
-
-
-
-
-
-
+#mapCanvas{
+	height: 100%;
+	width: 100%;
+	position: absolute;	
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
 
 
 
@@ -607,60 +567,54 @@ a.button.icon-down::before {
 
 
 //PROJECTS PAGE
-
-
-
-.categories{
-	height: 71px;
-	background-color: #2f2f2f;
-	position: fixed;
-	z-index: 12;
-	top: 78px;
-	margin-left: 92px;
-	margin-right: 92px;
-
-	ul{
-		list-style: none;
-		float: left;
-		-webkit-font-smoothing: subpixel-antialiased;
-		}
 		
+.portfolio{
+	margin-top: 78px;
+	height: 100%;
+	overflow: hidden;
+	#body{
+		padding: 70px 92px;
+		position: relative;
+		height: 100%;
+		overflow: scroll;
+	}
+	.projects{
+		overflow: scroll;
+	}
+	.project{
+		width: 100%/2;
+		display: block;
+		float: left;
+		height: 600px;
+		overflow: hidden;
+		img{
+			width: 100%;
+		}
+	}
+	.categories{
+		width: calc(~'100% - 184px');
+		height: 70px;
+		position: fixed;
+		background-color: #757575;
+		top: 78px;
+		padding: 35px 0;
+		line-height: 22px;
+		box-sizing: border-box;
 		li{
+			padding: 0 23px;
+			color: #fff;
 			float:left;
 			text-align: center;
 			color: #fff;
 			font-family: "brandon-grotesque",sans-serif;
 			font-size: 13px;
-			font-weight: 700;
+			font-weight: 500;
+			line-height: 3px;
 			text-transform: uppercase;
 			text-decoration: none; 
-			}
 		}
-			
-
-.projects{
-	height: 100%;
-	margin-top: 22px;
-	float: left;
-
-	
-}
-	
-	
-
-.project{
-	float:left;
-	width: 500px;
-	height: 300px;
-	background-size: cover;
-	padding:0px;
-	overflow: hidden;
 	}
-	
-	img{
-		width: 100%;
-	}
-
+}	
 	
 			
 
@@ -741,23 +695,62 @@ h2.namesfaces{
 	
 }
 
-	.map{
-		background: linear-gradient(-180deg, #002c5b 0%,#03313d 49%,#03313d 49%,#091733 100%);
+
+
+
+//projectpage
+
+.single-portfolio{
+
 	}
-		#mapCanvas {
-			padding:0;
-			height: 100%;
-			width: 100%;
-			top: 0;
-			left: 0;
-			position: fixed;
-			z-index: -1;
-			overflow: hidden;
-			-webkit-transition: opacity 2s ease-in;
-			-moz-animation: fadein 2s; /* Firefox */
-			-webkit-animation: fadein 2s; /* Safari and Chrome */
-			-o-animation: fadein 2s; /* Opera */
+	
+.projectscroller{
+	height: 1400px;
+	z-index: 4;
+	position: relative;
+	margin-left: 92px;
+	margin-right: 92px;
+	top: 70px;
+	background-color: white;
+	}
+	
+	
+.cover{
+	width: 100%;
+	height: 430px;
+	background-color: gray;
+	position: absolute;
+	top: 0px;
+	z-index: -100;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+#videocover {
+  position: relative;
+  right: 0; 
+  top: 0;
+  width: 100%;  
+  z-index: -100;
+}
+
+.Description{
+	position: relative;
+	width: 100%;
+	padding-top: 450px;
+	h1{
+		position: relative;
 		}
+}	
+
+
+	
+		
+
+
+	
+	
+
 
 
 

@@ -1,8 +1,12 @@
 extends ../layouts/default
 	
 block content
+	script(src='/script/dojo.js')
+	script(src='/script/windy.js')
+	script(src='http://js.arcgis.com/3.8compact')
+	script(src='/script/wind.js')
 
-	.body
+	#body
 		.home
 			//vertical
 			.slider
@@ -15,14 +19,21 @@ block content
 				script(src='/script/tagline.js')
 				
 				.tagline Hi. We are the wind
-				
-			a.button.icon-down(onclick="$('.projects').addClass('vis');$('.home').addClass('invis')") Who we are and what we do		
-		
+				.arrow
+				a.button.icon-down Who we are and what we do		
 			.scroller 
+				
 				.intro
 					
-					p We are brainsick humans, designers, artists & scientists. <br>We feel the internet, think brands, empowered by design-thinking <br>and forced by thirst for perfection. Practical & aesthetic design is <br>our primary cause and ultimate motivation. 
+					p <b>We are</b> brainsick humans, designers, artists & scientists. <br>We feel the internet, think brands, empowered by design-thinking <br>and forced by thirst for perfection. Practical & aesthetic design is <br>our primary cause and ultimate motivation. 
+				
+				
+				
+				.wedo
+					p <b>We do</b> not have a packages of sevices. Every project is unique and has a different aproach depending on objective. We can do a lot of stuff, and it was really hard to distinguish but to be clear, we separated our work on two basic startpoints 
+					
 				.services
+				
 					.serviceblock
 						.block
 							h2 Branding & Identity 
@@ -34,9 +45,8 @@ block content
 					
 					
 				.projectslinkbox
-						.prbutton.projectslink See our projects
-				//.Fundamentals
-			
+						//.prbutton.projectslink See our projects
+							
 	
 					
 				//.Lastproject
