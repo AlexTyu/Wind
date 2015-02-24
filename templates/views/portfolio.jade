@@ -6,13 +6,15 @@ block content
 		li App   			
 		li Branding   
 		li Product Design  		  
-		li Photography  
 		li Web   
-		li Everything				
+				
 	.projects
 		each portfolio in portfolios			
 			a.project(href="/portfolio/"+portfolio.key)
-				//h2= portfolio.name
+				
 				img(src="../../files/"+portfolio.thumbnail.filename)
+				.projectdescr
+				
+				//h2= portfolio.name
 	.clear
 				
