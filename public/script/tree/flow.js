@@ -905,6 +905,7 @@ var Flow = function (canvas) {
         gl.bindFramebuffer(gl.FRAMEBUFFER, null);
         gl.viewport(0, 0, canvas.width, canvas.height);
         gl.clearColor(0.0, 0.0, 0.0, 0.0);
+
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
 
@@ -1119,6 +1120,9 @@ var Flow = function (canvas) {
         gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
         requestAnimationFrame(render);
+      
+        ;
     };
+ 
     render();
 };

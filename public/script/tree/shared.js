@@ -399,3 +399,6 @@ var hsvToRGB = function (h, s, v) {
 var rgbToString = function (color) {
     return 'rgb(' + (color[0] * 255).toFixed(0) + ',' + (color[1] * 255).toFixed(0) + ',' + (color[2] * 255).toFixed(0) + ')';
 };
+
+var renderer = new THREE.WebGLRenderer( { alpha: true } );
+	

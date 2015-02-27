@@ -8,11 +8,13 @@ block content
 	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false")
 	script(src='/script/map.js')
 	
+	#mapCanvas(style="opacity: 0.5; height: 500px;")
+	#googlemap(style="width:100%;height:500px")
 	
-		
-
-	#map(style="width:500px;height:500px")
-			
+	.info
+		p 1933 Peralta St, Oakland, CA 94607	
+		p 312 428 1012
+		p hi@wind.life 
 	.contactform
 		
 		if enquirySubmitted
@@ -41,3 +43,5 @@ block content
 						textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
 					.form-actions
 						button(type='submit').btn.btn-primary Send
+						
+
