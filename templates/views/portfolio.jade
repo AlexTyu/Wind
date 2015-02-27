@@ -1,7 +1,9 @@
 extends ../layouts/default
 	
 block content
+	.cool
 	.portfolio(ng-app="wind",ng-controller="portfolioController",ng-init="get('')")
+		
 		ul.categories
 			li(ng-click="get('')",ng-class="{active:(catname == '')}") All 
 			li(ng-click="get('Advertising')",ng-class="{active:(catname == 'Advertising')}") Advertising    
