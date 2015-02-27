@@ -2,8 +2,8 @@ html, body {margin:0;padding:0; background-color: #EBEBEB}
 
 @windblack: rgba(0, 0, 0, 0.93); //Plashka 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { left: 0; }
+    to   { left: 1; }
 }
 
 .clear{
@@ -734,16 +734,16 @@ a.button.icon-down::before {
 		
 	}
 	.project{
-		width: calc(~"100%/4 - 10px");
+		width: calc(~"100%/8 - 10px");
 		display: block;
 		float: left;
-		height: 300px;
+		height: 157px;
 		overflow: hidden;
 		background-color: white;
 		background-size: cover;
 		margin: 5px;
 		opacity: 0;
-		-webkit-animation: fadein 0.5s forwards;
+		-webkit-animation: fadein 0.5s both;
 			
 	}
 		img{
