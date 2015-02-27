@@ -24,9 +24,9 @@ Portfolio.add({
 	
 	Short: { type: Types.Html, wysiwyg: false, label: "Short Description", required: true, initial: true },
 	
-	Objective: { type: Types.Html, wysiwyg: true, label: "Objective", required: false, initial: false },
+	Objective: { type: Types.Html, wysiwyg: false, label: "Objective", required: false, initial: false },
 	
-	Solution: { type: Types.Html, wysiwyg: true, label: "Solution", required: false, initial: false },
+	Solution: { type: Types.Html, wysiwyg: false, label: "Solution", required: false, initial: false },
 	
 	
 	

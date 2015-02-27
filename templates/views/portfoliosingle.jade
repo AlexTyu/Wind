@@ -29,13 +29,14 @@ block content
 				.overview
 					.content
 						h3 Objective
-						.Objective!= data.portfolio.Objective
+						p!= data.portfolio.Objective
+						
+						h3 Solution
+						p!= data.portfolio.Solution
 				
-				p.Solution
-					data.portfolio.Solution
+					
 				
 				img.first(src="../../files/"+data.portfolio.image1.filename)
-				
 				p.imagedescription= data.portfolio.image1description
 			
 				
