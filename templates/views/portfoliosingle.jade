@@ -14,16 +14,22 @@ block content
 		
 			img#imagecover(src="../../files/"+data.portfolio.cover.filename)
 			
-			h1= data.portfolio.name
+			
 	
 		.projectscroller
 			.Description
+			
+				
 				.Short
+					h1= data.portfolio.name
+					hr
 					p=data.portfolio.Short
-				
-				a.url(href="http://"+data.portfolio.URL)= data.portfolio.URL
-				
-				.Objective!= data.portfolio.Objective
+					//a.url(href="http://"+data.portfolio.URL)= data.portfolio.URL
+					
+				.overview
+					.content
+						h3 Objective
+						.Objective!= data.portfolio.Objective
 				
 				p.Solution
 					data.portfolio.Solution
