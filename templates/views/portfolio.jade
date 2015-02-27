@@ -1,20 +1,17 @@
 extends ../layouts/default
 	
 block content
-	ul.categories
-		li Advertising    
-		li App   			
-		li Branding   
-		li Product Design  		  
-		li Web   
-				
-	.projects
-		each portfolio in portfolios			
-			a.project(href="/portfolio/"+portfolio.key)
-				
-				img(src="../../files/"+portfolio.thumbnail.filename)
-				.projectdescr
-				
-				//h2= portfolio.name
-	.clear
+	.portfolio(ng-app="wind",ng-controller="portfolioController",ng-init="get('')")
+		ul.categories
+			li(ng-click="get('')",ng-class="{active:(catname == '')}") All 
+			li(ng-click="get('Advertising')",ng-class="{active:(catname == 'Advertising')}") Advertising    
+			li(ng-click="get('App')",ng-class="{active:(catname == 'App')}") App   			
+			li(ng-click="get('Branding')",ng-class="{active:(catname == 'Branding')}") Branding   
+			li(ng-click="get('Product Design')",ng-class="{active:(catname == 'Product Design')}") Product Design  		  
+			li(ng-click="get('Web')",ng-class="{active:(catname == 'Web')}") Web   
+					
+		.projects
+			a.project(href="/portfolio/{{ portfolio.key }}",ng-repeat="portfolio in portfolios track by $index",style="-webkit-animation-delay:{{$index/10}}s")		
+				img(src="../../files/{{ portfolio.thumbnail.filename }}")
+		.clear
 				

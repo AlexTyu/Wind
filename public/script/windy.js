@@ -348,16 +348,16 @@ var Windy = function( params ){
           "rgba(" + hexToR('#fe3705') + ", " + hexToG('#fe3705') + ", " + hexToB('#fe3705') + ", " + 0.5 + ")",
           "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")"*/
           
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
-          "rgba(" + hexToR('#00254A') + ", " + hexToG('#00254A') + ", " + hexToB('#00254A') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
+          "rgba(" + hexToR('#ff0000') + ", " + hexToG('#ff0000') + ", " + hexToB('#ff0000') + ", " + 0.5 + ")",
           
           /*"rgba(" + hexToR('#ffffff') + ", " + hexToG('#ffffff') + ", " + hexToB('#ffffff') + ", " + 0.5 + ")",
           "rgba(" + hexToR('#ffffff') + ", " + hexToG('#ffffff') + ", " + hexToB('#ffffff') + ", " + 0.5 + ")",
@@ -444,7 +444,7 @@ var Windy = function( params ){
         buckets.forEach(function(bucket, i) {
             if (bucket.length > 0) {
                 g.beginPath();
-                g.strokeStyle = '#ffffff';
+                g.strokeStyle = '#00bbff';
                 bucket.forEach(function(particle) {
                     g.moveTo(particle.x, particle.y);
                     g.lineTo(particle.xt, particle.yt);
