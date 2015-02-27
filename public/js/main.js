@@ -41,5 +41,5 @@ $(window).scroll(function(){
 	if ( $( "body" ).hasClass( "portfiliosingle" ) ){
 		$(".portfiliosingle #header").addClass('bg');
 	}
-	console.log($(window).scrollTop);
+	console.log($(window).scrollTop());
 })
