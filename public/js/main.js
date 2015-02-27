@@ -40,7 +40,7 @@ app.controller("portfolioController", function ($scope,$rootScope,$http) {
 $(window).scroll(function(){
 	if ( $( "body" ).hasClass( "portfiliosingle" )  && ($(window).scrollTop() > 500) ){
 		$(".portfiliosingle #header").addClass('bg');
-	} else if ($(window).scrollTop() > 50) {
+	} else if ($(window).scrollTop()  < 500) {
 		$(".portfiliosingle #header").removeClass('bg');
 	}
 })
