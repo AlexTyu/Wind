@@ -38,7 +38,7 @@ app.controller("portfolioController", function ($scope,$rootScope,$http) {
 
 
 $(window).scroll(function(){
-	if ( $( "body" ).hasClass( "portfiliosingle" ) ) && ($(window).scrollTop() > 500) {
+	if ( $( "body" ).hasClass( "portfiliosingle" )  && ($(window).scrollTop() > 500) ){
 		$(".portfiliosingle #header").addClass('bg');
 	}
 })
