@@ -35,3 +35,8 @@ app.controller("portfolioController", function ($scope,$rootScope,$http) {
 	}	
 	
 });
+
+
+$(".portfiliosingle").scroll(function(){
+	console.log(1);
+})
