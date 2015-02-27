@@ -21,7 +21,7 @@ var _ = require('underscore');
 
 exports.initLocals = function(req, res, next) {
 	
-	var locals = res.locals;
+	var locals = res.locals; 
 	
 	locals.navLinks = [
 		{ label: 'The Wind',	key: 'home',		href: '/' },
