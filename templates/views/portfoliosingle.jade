@@ -18,11 +18,12 @@ block content
 	
 		.projectscroller
 			.Description
-				.Short: data.portfolio.Short
+				.Short
+					p=data.portfolio.Short
 				
 				a.url(href="http://"+data.portfolio.URL)= data.portfolio.URL
 				
-				p.Objective=data.portfolio.Objective
+				.Objective= data.portfolio.Objective
 				
 				p.Solution
 					data.portfolio.Solution
