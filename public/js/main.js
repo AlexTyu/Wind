@@ -36,6 +36,13 @@ app.controller("portfolioController", function ($scope,$rootScope,$http) {
 	
 });
 
+$(document).ready(function(){
+	$(".slider").height($(window).height());
+	$("#render").height($(window).height());
+	$(".home").css("margin-top",$(window).height());
+	$("#hawkhill").height($(window).height());
+	$("#hawkhill").width($(window).height()*1.77777777);
+})
 
 $(window).scroll(function(){
 	if ( $( "body" ).hasClass( "portfiliosingle" )  && ($(window).scrollTop() > 500) ){
@@ -43,4 +50,6 @@ $(window).scroll(function(){
 	} else if ($(window).scrollTop()  < 500) {
 		$(".portfiliosingle #header").removeClass('bg');
 	}
+	
+	$(".slider").css("height", $(window).height() - $(window).scrollTop() );
 })

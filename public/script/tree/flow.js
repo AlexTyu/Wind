@@ -762,10 +762,10 @@ var Flow = function (canvas) {
 
 
     var onresize = function () {
-        var aspectRatio = 3000 / 700;
+        var aspectRatio = 3000 / $(window).height();
         makePerspectiveMatrix(projectionMatrix, PROJECTION_FOV, aspectRatio, PROJECTION_NEAR, PROJECTION_FAR);
         canvas.width = 3000;
-        canvas.height = 700;
+        canvas.height = $(window).height();
     };
 
     window.addEventListener('resize', onresize);
